@@ -5,7 +5,14 @@ export const Navbar = () => {
   return (
     <div className="flex items-center justify-between">
       <Link href={"/"}>
-        <Image src="/logo.svg" width={50} height={50} alt="FIntalogo" />
+        <Image
+          draggable={false}
+          loading="lazy"
+          src="/logo.svg"
+          width={100}
+          height={100}
+          alt="logo"
+        />
       </Link>
     </div>
   );
