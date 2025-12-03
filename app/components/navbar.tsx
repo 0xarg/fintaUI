@@ -25,8 +25,8 @@ export const Navbar = () => {
           draggable={false}
           loading="lazy"
           src="/logo.svg"
-          width={100}
-          height={100}
+          width={70}
+          height={70}
           alt="logo"
         />
       </Link>
@@ -35,12 +35,12 @@ export const Navbar = () => {
           <Link
             href={"/"}
             key={index}
-            className="text-neutral-800 font-medium hover:text-neutral-500 transition duration-200"
+            className="text-neutral-800 font-medium text-sm hover:text-neutral-500 transition duration-200"
           >
             {link.title}
           </Link>
         ))}
-      <button className="bg-[#2579F4] px-4 py-2 rounded-lg tracking-wide text-white text-shadow-md shadow-lg font-medium">Get Started</button>
+      <button className="bg-[#2579F4] text-sm px-3 py-2 rounded-lg tracking-wide text-white text-shadow-md shadow-lg font-medium">Get Started</button>
       </div>
     </div>
   );
