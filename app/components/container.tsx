@@ -9,7 +9,7 @@ export const Container = ({
 }) => {
 
     return (
-      <div className={cn("mx-auto max-w-4xl  px-4 md:py-8", className)}>
+      <div className={cn("mx-auto max-w-7xl w-full relative z-10 px-4 md:py-8", className)}>
         {children}
       </div>
     );
