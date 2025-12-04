@@ -1,47 +1,38 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react'
 
-export const Navbar = () => {
-
-    const links = [
-        {
-            title:"Founders"
-        },
-        {
-            title:"Guide"
-        },
-        {
-            title:"Pricing"
-        },
-        {
-            title:"Log In"
-        },
-    ]
-
+const Navbar = () => {
+  const links = [
+    {
+      title: "Founders",
+    },
+    {
+      title: "Guide",
+    },
+    {
+      title: "Pricing",
+    },
+    {
+      title: "Log In",
+    },
+  ];
   return (
-    <div className="flex justify-between items-center py-4 px-4">
+    <div className='flex items-center justify-between py-4 px-4'>
       <Link href={"/"}>
-        <Image
-          draggable={false}
-          loading="lazy"
-          src="/logo.svg"
-          width={70}
-          height={70}
-          alt="logo"
-        />
+      <Image src={"./logo.svg"} alt='logo' height={70} width={70} /> 
       </Link>
-      <div className=" flex items-center gap-8">
-        {links.map((link, index) => (
-          <Link
-            href={"/"}
-            key={index}
-            className="text-neutral-800 font-medium text-sm hover:text-neutral-500 transition duration-200"
-          >
-            {link.title}
-          </Link>
+
+      <div className='flex gap-8 items-center'>
+        {links.map((link,index)=>(
+          <Link key={index} href={"/"} className='text-neutral-900 font-medium text-sm hover:text-neutral-600 transition duration-200'>{link.title}</Link>
         ))}
-      <button className="bg-[#2579F4] text-sm px-3 py-2 rounded-lg tracking-wide text-white text-shadow-md shadow-lg font-medium">Get Started</button>
+        <button className='bg-[#2579F4] px-2 py-1 rounded-lg text-white shadow-lg text-shadow-md tracking-wide font-medium text-sm'>Get started</button>
       </div>
+
+
     </div>
-  );
-};
+  )
+}
+
+export default Navbar
